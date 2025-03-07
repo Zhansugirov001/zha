@@ -9,7 +9,7 @@
     <title>Jans</title>
 </head>
 <body>
-    <audio autoplay>
+    <audio id="myAudio" autoplay>
         <source src="assets/music/spotidownloader.com - Pink + White - Frank Ocean.mp3" type="audio/mpeg">
     </audio>
     <header>
@@ -101,6 +101,10 @@
                 reset: true
             });
         });
+        document.addEventListener("click", function () {
+            let audio = document.getElementById("myAudio");
+            audio.play();
+        }, { once: true });
         const Days = document.getElementById('days');
         const Hours = document.getElementById('hours');
         const Minutes = document.getElementById('minutes');
